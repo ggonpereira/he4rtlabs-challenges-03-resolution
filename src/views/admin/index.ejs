@@ -1,0 +1,47 @@
+<%- include("../includes/head") %>
+
+<div class="dashboard">
+  <% if (users.length !== 0) { %>
+  <div class="dashboard-content">
+    <header class="header">
+      <h1 class="title">He4rt Dashboard</h1>
+      <a href="/"
+        ><img
+          src="assets/img/he4rt-logo-black.png"
+          alt="He4rt logo"
+          class="logo"
+      /></a>
+    </header>
+
+    <main class="main">
+      <div class="qtt-register">
+        <span>Registros/hoje: <%= createdToday.length %></span>
+        <span>Registros/semana: <%= createdThisWeek.length %></span>
+      </div>
+      <table class="table-infos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>E-mail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach((user) => { %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </main>
+
+    <footer class="footer">
+      <a href="/">Retornar para a página principal</a>
+    </footer>
+  </div>
+
+  <% } %>
+</div>
+
+<%- include("../includes/footer") %>
