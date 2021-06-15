@@ -1,0 +1,81 @@
+<%- include("./includes/head") %>
+
+<div class="wrapper">
+  <div class="form-container form-register hide">
+    <header class="header">
+      <h1 class="title">Criar Conta</h1>
+      <a href="/"
+        ><img
+          src="assets/img/he4rt-logo-white.png"
+          alt="He4rt logo"
+          class="logo"
+      /></a>
+    </header>
+
+    <main class="main">
+      <form method="POST" action="/register">
+        <input
+          name="email"
+          placeholder="Digite seu e-mail..."
+          type="email"
+          class="input"
+          required
+        />
+        <input
+          name="password"
+          placeholder="Digite sua senha..."
+          type="password"
+          class="input"
+          required
+        />
+        <footer class="footer">
+          <p class="footer-text">
+            Já possui uma conta? Clique
+            <span onclick="changeForm()" class="change-form">aqui</span>
+          </p>
+          <button type="submit" class="submit">Registrar</button>
+        </footer>
+      </form>
+    </main>
+  </div>
+
+  <div class="form-container form-login">
+    <header class="header">
+      <h1 class="title">Realizar Login</h1>
+      <a href="/"
+        ><img
+          src="assets/img/he4rt-logo-black.png"
+          alt="He4rt logo"
+          class="logo"
+      /></a>
+    </header>
+
+    <main class="main">
+      <form method="POST" action="/login">
+        <input
+          name="email"
+          placeholder="Digite seu e-mail..."
+          type="email"
+          class="input"
+          required
+        />
+        <input
+          name="password"
+          placeholder="Digite sua senha..."
+          type="password"
+          class="input"
+          required
+        />
+        <footer class="footer">
+          <p class="footer-text">
+            Ainda não possui conta? Clique
+            <span onclick="changeForm()" class="change-form">aqui</span>
+          </p>
+          <button type="submit" class="submit">Entrar</button>
+        </footer>
+      </form>
+    </main>
+  </div>
+</div>
+
+<%- include("./includes/footer") %>
